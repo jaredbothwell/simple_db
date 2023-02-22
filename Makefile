@@ -1,11 +1,11 @@
-db: db.c
-	gcc db.c -o db
+db: src/db.c
+	gcc src/db.c -o bin/db
 
 run: db
-	./db mydb.db
+	./bin/db mydb.db
 
 clean:
-	rm -f db *.db
+	rm -f bin/db bin/*.db
 
 test: db
 	bundle exec rspec
